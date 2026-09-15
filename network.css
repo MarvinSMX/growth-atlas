@@ -296,17 +296,31 @@ input[type="text"], input[type="search"], select, textarea {
 .vote-count, #voteMsg { color: #0B3D2E !important; font-weight: 700 !important; }
 
 /* Contrast kill-switch: light surfaces never get white/cream ink */
-.content, .nx-shell, .container, .wrap, .content *:not(th):not(thead *):not(.back-to-top):not(.site-pill.current):not(.site-pill:hover):not(.special-btn.active):not(.browse-link.primary):not(.header-pro-btn):not(.watchlist-btn),
-.intro-text, .intro-text *, .top-disclaimer, .top-disclaimer *, .disclaimer, .disclaimer *,
-.table-meta, .table-meta *, .section-head, .section-head *, .chip-label, .col-name,
-.site-network-bar, .site-network-label, footer, .footer, footer *, .footer * {
-  /* intentional: body-level ink already set; specific rules above win for accents */
-}
 .intro-text, .top-disclaimer, .disclaimer, .table-meta, .loading, .chip-label,
 .col-name, .site-network-label, .banner small, .banner-label, .banner-legal,
 .subhead, p.subhead, .az-sub, .hub-link, .hub-link a {
   color: #333333 !important;
 }
+
+/* Share / Post — readable on light canvas (below dark hero) */
+.share-buttons { display: flex !important; gap: 12px !important; justify-content: center !important; flex-wrap: wrap !important; margin: 18px auto 8px !important; }
+.share-btn, a.share-btn {
+  display: inline-flex !important; align-items: center !important; gap: 6px !important;
+  padding: 8px 14px !important; border-radius: 6px !important;
+  font-weight: 800 !important; font-size: 0.85em !important; text-decoration: none !important;
+  color: #222222 !important; background: #ffffff !important;
+  border: 1.5px solid #0B3D2E !important; box-shadow: none !important;
+}
+.share-btn:hover, a.share-btn:hover {
+  background: #f2f4f0 !important; color: #111111 !important; border-color: #C4782A !important;
+}
+.share-btn.fb, a.share-btn.fb, .fb.share-btn {
+  color: #1877F2 !important; border-color: #1877F2 !important; background: #ffffff !important;
+}
+.share-btn.x, a.share-btn.x, .x.share-btn, .share-btn.xbtn, a.share-btn.xbtn {
+  color: #111111 !important; border-color: #111111 !important; background: #ffffff !important;
+}
+.share-btn svg { width: 15px !important; height: 15px !important; fill: currentColor !important; }
 .chip {
   background: #ffffff !important; color: #0B3D2E !important; border: 1px solid #0B3D2E !important;
 }
