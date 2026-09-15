@@ -941,7 +941,7 @@ tr:nth-child(even) {
 document.getElementById('footerYear').textContent = new Date().getFullYear();
 
 const CSV_URL  = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQgB3eBiOxZ6CoBjVvi9Rm3PmJDssWCsHWuVG4YgCPnXLG02u0tQxoR055J-e21MYbXJES1UpPTy7h9/pub?gid=0&single=true&output=csv';
-const VOTE_API = 'https://script.google.com/macros/s/REPLACE_ME_GROWTH_ATLAS_VOTES/exec';
+const VOTE_API = 'https://script.google.com/macros/s/AKfycbzQNiiEScaN1Aim_DitskzvjsqOq1LimJxUPzb3xBcarP5a3xqhJOp30quzWS9AousV/exec';
 
 function parseCSV(text) {
   return text.replace(/\r\n/g,'\n').replace(/\r/g,'\n').trim().split('\n').map(line => {
