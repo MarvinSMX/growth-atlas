@@ -267,7 +267,6 @@ function header() {
       <a href="https://marvinsmx.github.io/monthly-payout/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
       <a href="https://marvinsmx.github.io/orbit-funds/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
       <a href="https://marvinsmx.github.io/return-atlas/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
-      <a href="https://dividendstack.com/" class="site-pill" title="Dividend tools directory">🛠️ DividendStack.com</a>
     </div>
 </div>`;
 }
