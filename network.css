@@ -59,9 +59,9 @@ body {
 a { color: #0B3D2E !important; }
 a:hover { color: #C4782A !important; }
 
-/* Solid brand header + thick accent rule */
-header, .nx-header, body > header:not(.nx-skip) {
-  width: 100% !important;
+/* Solid brand header + thick accent rule — light/gold ink on dark green (never brand-on-brand) */
+header, .nx-header, .site-header, body > header:not(.nx-skip) {
+  width: 100% !important; align-self: stretch !important;
   background: #0B3D2E !important;
   color: #ffffff !important;
   text-align: center !important;
@@ -69,41 +69,54 @@ header, .nx-header, body > header:not(.nx-skip) {
   border-bottom: 4px solid #C4782A !important;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35) !important;
 }
-.logo, .nx-logo, .logo-text, .logo-link .logo {
+.logo, .nx-logo, .logo-text, .logo-link, .logo-link .logo, .header-logo,
+header .logo, .site-header .header-logo, a.header-logo {
   font-family: "Merriweather", Georgia, serif !important;
   font-weight: 900 !important;
   font-size: clamp(24px, 6vw, 42px) !important;
-  color: #C4782A !important;
+  color: #F5E6D0 !important;
   line-height: 1.1 !important;
+  text-decoration: none !important;
 }
-.logo span, .nx-logo span { color: #C4782A !important; }
+.logo span, .nx-logo span, .header-logo span { color: #C4782A !important; }
 .logo-sub, .nx-tagline {
   font-family: "Lato", Arial, sans-serif !important;
   font-size: 0.68em !important;
   font-weight: 700 !important;
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
-  color: rgba(255, 255, 255, 0.72) !important;
+  color: rgba(255, 255, 255, 0.78) !important;
   margin-top: 5px !important;
 }
 .header-links, .nx-nav {
   display: flex !important; flex-wrap: wrap !important; gap: 10px !important;
   justify-content: center !important; margin-top: 16px !important;
 }
-.header-link, .nx-nav a, .btn-ghost {
+/* All header anchors — including bare .header-links a / .header-cta (beat global a{}) */
+header a, .site-header a, .nx-header a,
+.header-links a, .header-link, .nx-nav a, .btn-ghost,
+.header-cta, a.header-cta, .header-pro-btn {
   display: inline-flex !important; align-items: center !important; gap: 6px !important;
   padding: 9px 18px !important;
   border: 2px solid #C4782A !important;
   border-radius: 999px !important;
-  background: rgba(196, 120, 42, 0.16) !important;
+  background: rgba(196, 120, 42, 0.22) !important;
   color: #F5E6D0 !important;
   font-family: "Lato", Arial, sans-serif !important;
   font-size: 13.5px !important; font-weight: 900 !important;
   text-decoration: none !important;
 }
-.header-link:hover, .nx-nav a:hover, .btn-ghost:hover {
+header a.logo-link, .site-header a.header-logo, a.logo-link {
+  display: inline-block !important; border: none !important; background: transparent !important;
+  padding: 0 !important; color: #F5E6D0 !important;
+}
+header a:hover, .site-header a:hover, .header-links a:hover, .header-link:hover,
+.nx-nav a:hover, .btn-ghost:hover, .header-cta:hover, a.header-cta:hover {
   background: #C4782A !important; color: #0B3D2E !important; border-color: #C4782A !important;
 }
+header a.logo-link:hover, .site-header a.header-logo:hover { background: transparent !important; color: #C4782A !important; }
+/* Legacy duplicate Our Sites strip — keep only .site-network-bar */
+.network-bar { display: none !important; }
 
 /* Network bar — dark ink on white */
 .site-network-bar {
