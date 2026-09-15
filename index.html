@@ -998,12 +998,12 @@
     }
 
     function loadCSV() {
-      fetch(CSV_URL + '&t=' + Date.now())
+      fetch(CSV_URL + '?t=' + Date.now())
         .then(r => { if (!r.ok) throw new Error(); return r.text(); })
         .then(parseAndRender)
         .catch(() => {
           setTimeout(() => {
-            fetch(CSV_URL + '&t=' + Date.now())
+            fetch(CSV_URL + '?t=' + Date.now())
               .then(r => r.text()).then(parseAndRender).catch(showError);
           }, 2000);
         });
