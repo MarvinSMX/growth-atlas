@@ -413,7 +413,7 @@ function etfPage(etf, all) {
 <meta property="og:type" content="article">
 <meta property="og:image" content="${OG_IMAGE}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@YieldAtlas">
+<meta name="twitter:site" content="@YieldAtlasETFs">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <script type="application/ld+json">${JSON.stringify(crumbSchema)}</script>
@@ -527,7 +527,7 @@ function hubPage(all) {
 <meta property="og:type" content="website">
 <meta property="og:image" content="${OG_IMAGE}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@YieldAtlas">
+<meta name="twitter:site" content="@YieldAtlasETFs">
 <script type="application/ld+json">${JSON.stringify(itemList)}</script>${HEAD_COMMON}
 <style>${STYLES}</style>
 </head>
