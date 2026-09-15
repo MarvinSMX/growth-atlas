@@ -21,7 +21,7 @@
 4. Spot-check ten random `/etf/` pages. If they read thin, fix that before
    submitting to GSC — not after.
 5. Commit the generated files and push.
-6. In GSC, re-submit `https://growthatlas.com/sitemap.xml`. The discovered count
+6. In GSC, re-submit `https://marvinsmx.github.io/growth-atlas/sitemap.xml`. The discovered count
    should jump from 1 to (7 + number of tickers).
 
 ## What changed in swipe.html

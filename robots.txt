@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://growthatlas.com/sitemap.xml
+Sitemap: https://marvinsmx.github.io/growth-atlas/sitemap.xml

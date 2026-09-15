@@ -20,9 +20,9 @@ const path = require('path');
 
 // ─── CONFIG ────────────────────────────────────────────────
 const CSV_URL =
-  'data/seed.csv';
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQgB3eBiOxZ6CoBjVvi9Rm3PmJDssWCsHWuVG4YgCPnXLG02u0tQxoR055J-e21MYbXJES1UpPTy7h9/pub?gid=0&single=true&output=csv';
 
-const SITE     = 'https://growthatlas.com';
+const SITE     = 'https://marvinsmx.github.io/growth-atlas/';
 const ROOT     = process.cwd();
 const ETF_DIR  = path.join(ROOT, 'etf');
 const GA_ID    = 'G-REPLACE_ME';
@@ -261,12 +261,12 @@ function header() {
 <div class="site-network-bar">
   <div class="site-network-track">
     <span class="site-network-label">Our Sites:</span>
-      <a href="https://growthatlas.com/" class="site-pill" title="Growth ETF rankings">📈 GrowthAtlas.com</a>
-      <a href="https://yieldatlas.com/" class="site-pill" title="Dividend ETF rankings">💵 YieldAtlas.com</a>
-      <a href="https://weeklypayout.com/" class="site-pill" title="Weekly paying dividend ETFs">📅 WeeklyPayout.com</a>
-      <a href="https://monthlypayout.com/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
-      <a href="https://orbitfunds.com/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
-      <a href="https://returnatlas.com/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
+      <a href="https://marvinsmx.github.io/growth-atlas/" class="site-pill" title="Growth ETF rankings">📈 GrowthAtlas.com</a>
+      <a href="https://marvinsmx.github.io/yield-atlas/" class="site-pill" title="Dividend ETF rankings">💵 YieldAtlas.com</a>
+      <a href="https://marvinsmx.github.io/weekly-payout/" class="site-pill" title="Weekly paying dividend ETFs">📅 WeeklyPayout.com</a>
+      <a href="https://marvinsmx.github.io/monthly-payout/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
+      <a href="https://marvinsmx.github.io/orbit-funds/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
+      <a href="https://marvinsmx.github.io/return-atlas/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
       <a href="https://dividendstack.com/" class="site-pill" title="Dividend tools directory">🛠️ DividendStack.com</a>
     </div>
 </div>`;
@@ -581,7 +581,7 @@ ${entries.join('\n')}
 // ─── MAIN ──────────────────────────────────────────────────
 async function main() {
   console.log('Fetching CSV...');
-  const res = await fetch(CSV_URL + '?t=' + Date.now());
+  const res = await fetch(CSV_URL + '&t=' + Date.now());
   if (!res.ok) throw new Error('CSV fetch failed: ' + res.status);
   const rows = parseCSV(await res.text());
   if (rows.length < 2) throw new Error('CSV has no data rows');
